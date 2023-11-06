@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
 
-export default function Header() {
+const Header = () => {
   return (
-    <div className="flex justify-between px-4 pt-4">
-      <div>Dashboard</div>
-      <div>Welcome Back, Clint</div>
+    <div className='flex justify-between px-4 pt-4'>
+      <h2>Dashboard</h2>
+      <h2>Welcome Back, Clint</h2>
     </div>
-  );
+  )
 }
+
+export default Header
