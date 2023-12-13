@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { BsPersonAdd } from 'react-icons/bs';
+import { FaRegAddressCard } from "react-icons/fa";
 
 const Sidebar = ({ children }) => {
   return (
@@ -37,7 +38,7 @@ const Sidebar = ({ children }) => {
           </Link>
           <Link href='/todos'>
             <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
-              <BsPersonAdd size={25} />
+              <FaRegAddressCard size={25} />
             </div>
           </Link>
         </div>
