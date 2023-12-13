@@ -41,6 +41,7 @@ const Sidebar = ({ children }) => {
               <FaRegAddressCard size={25} />
             </div>
           </Link>
+          
         </div>
       </div>
       <main className='ml-20 w-full'>{children}</main>
