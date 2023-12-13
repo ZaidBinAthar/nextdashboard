@@ -35,6 +35,11 @@ const Sidebar = ({ children }) => {
               <BsPersonAdd size={25} />
             </div>
           </Link>
+          <Link href='/todos'>
+            <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer my-4 p-3 rounded-lg inline-block'>
+              <BsPersonAdd size={25} />
+            </div>
+          </Link>
         </div>
       </div>
       <main className='ml-20 w-full'>{children}</main>
