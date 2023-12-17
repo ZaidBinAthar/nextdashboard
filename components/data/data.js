@@ -27,7 +27,7 @@ export const data = [
       first: 'Zaid',
       last: 'Athar',
     },
-    total: 495.85,
+    total: 5000000000000000,
     status: 'Completed',
     method: 'Visa',
     date: '1 Hour ago',
