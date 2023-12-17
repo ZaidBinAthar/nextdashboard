@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "sales": [
       {
         "id": 1,
@@ -128,3 +129,134 @@
       }
        ]
   }
+=======
+  "sales": [
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "brand": "ABC Electronics",
+      "price": 499.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "4",
+      "instock": true
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "brand": "XYZ Tech",
+      "price": 899.99,
+      "description": "Powerful laptop for work and entertainment purposes.",
+      "qty": "13",
+      "instock": false
+    },
+    {
+      "id": 3,
+      "name": "Mobile",
+      "brand": "ABC Electronics",
+      "price": 299.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "1",
+      "instock": true
+    },
+    {
+      "id": 4,
+      "name": "Shoes",
+      "brand": "ABC Electronics",
+      "price": 1099.20,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "2",
+      "instock": false
+    },
+    {
+      "id": 5,
+      "name": "Bat",
+      "brand": "ABC Electronics",
+      "price": 499.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "4",
+      "instock": true
+    },
+    {
+      "id": 6,
+      "name": "Laptop",
+      "brand": "XYZ Tech",
+      "price": 899.99,
+      "description": "Powerful laptop for work and entertainment purposes.",
+      "qty": "13",
+      "instock": false
+    },
+    {
+      "id": 7,
+      "name": "Mobile",
+      "brand": "ABC Electronics",
+      "price": 299.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "1",
+      "instock": true
+    },
+    {
+      "id": 8,
+      "name": "Shoes",
+      "brand": "ABC Electronics",
+      "price": 1099.20,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "2",
+      "instock": false
+    },
+    {
+      "id": 9,
+      "name": "Football",
+      "brand": "ABC Electronics",
+      "price": 499.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "4",
+      "instock": true
+    },
+    {
+      "id": 11,
+      "name": "Golf",
+      "brand": "ABC Electronics",
+      "price": 2100.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "122",
+      "instock": false
+    },
+    {
+      "id": 10,
+      "name": "Watch",
+      "brand": "Rado",
+      "price": 1199.99,
+      "description": "A high-quality watch with advanced features.",
+      "qty": "24",
+      "instock": true
+    },
+    {
+      "id": 13,
+      "name": "Gaming Chair",
+      "brand": "ABC Electronics",
+      "price": 149.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "12",
+      "instock": false
+    },
+    {
+      "id": 12,
+      "name": "A/C",
+      "brand": "ABC Electronics",
+      "price": 889.99,
+      "description": "A high-quality smartphone with advanced features.",
+      "qty": "4",
+      "instock": true
+    },
+    {
+      "id": 14,
+      "name": "PS5",
+      "brand": "XYZ Tech",
+      "price": 598.27,
+      "description": "Powerful Play Station 5 For entertainment purposes.",
+      "qty": "10",
+      "instock": false
+    }
+     ]
+}
+>>>>>>> 41fd32620771be690fee59cf6cd7cee432c68bbc

@@ -58,6 +58,7 @@ const Sidebar = ({ children }) => {
               <BsPersonAdd size={25} />
             </div>
           </Link>
+<<<<<<< HEAD
 
           <Link href='/todos'>
             <div className='sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block'>
@@ -70,6 +71,8 @@ const Sidebar = ({ children }) => {
               <IoSettingsOutline size={25} />
             </div>
           </Link>
+=======
+>>>>>>> 41fd32620771be690fee59cf6cd7cee432c68bbc
         </div>
       </div>
       <main className='ml-20 w-full'>{children}</main>
