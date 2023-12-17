@@ -28,7 +28,7 @@ const Header = () => {
       autoClose: 10000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true,
+      pauseOnHover: true, 
       draggable: true,
     });
   };
