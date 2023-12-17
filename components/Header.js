@@ -53,21 +53,11 @@ const Header = () => {
             <IoSettingsOutline size={25} />
           </Link>
         </div>
-<<<<<<< HEAD
         <div className='flex pl-8 pr-2'>
           <p className='text-purple-400'>Zaid</p>
         </div>
         <p className='pt-0.5'><CgProfile size={20} /></p>
       </div>
-=======
-        <div className='flex px-8'>
-          <p>Zaid</p>
-        </div>
-        <p><CgProfile size={20} /></p>
-      </div>
-      <h2>Dashboard</h2><h1 className='text-xl font-bold text-yellow-500'>Dev By: Zaid Bin Ather</h1>
-      <h2>Welcome Back, Clint</h2>
->>>>>>> 41fd32620771be690fee59cf6cd7cee432c68bbc
     </div>
   )
 }

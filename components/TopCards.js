@@ -2,10 +2,10 @@ import React from 'react';
 
 const TopCards = () => {
   const cards = [
-    { label: 'Average Revenue', value: '$78.23', percentage: '+8%', bgColor: 'bg-green-500' },
-    { label: 'Active Users', value: '5,432', percentage: '+15%', bgColor: 'bg-blue-500' },
-    { label: 'Total Orders', value: '1,245', percentage: '+10%', bgColor: 'bg-orange-500' },
-    { label: 'Total Prophet', value: '$12,981,245', percentage: '+78%', bgColor: 'bg-yellow-500' },
+    { label: 'Athar Revenue', value: '$78.23', percentage: '+8%', bgColor: 'bg-green-500' },
+    { label: 'Asia Deploy', value: '5,432', percentage: '+15%', bgColor: 'bg-blue-500' },
+    { label: 'Huzaifa', value: '1,245', percentage: '+10%', bgColor: 'bg-orange-500' },
+    { label: 'Hamza', value: '$12,981,245', percentage: '+78%', bgColor: 'bg-yellow-500' },
   ];
 
   return (
