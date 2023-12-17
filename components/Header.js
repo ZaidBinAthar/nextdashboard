@@ -58,6 +58,8 @@ const Header = () => {
         </div>
         <p><CgProfile size={20} /></p>
       </div>
+      <h2>Dashboard</h2><h1 className='text-xl font-bold text-yellow-500'>Dev By: Zaid Bin Ather</h1>
+      <h2>Welcome Back, Clint</h2>
     </div>
   )
 }
