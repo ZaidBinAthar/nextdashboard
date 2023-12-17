@@ -1,55 +1,176 @@
-import React from 'react';
-import { BsPersonFill, BsThreeDotsVertical } from 'react-icons/bs';
-import { newData } from '@/components/data/newData';
-import { AiOutlineGithub } from 'react-icons/ai';
-import { AiFillSignal } from 'react-icons/ai';
+// components/settings.js
+'use client'
+import Link from 'next/link';
+import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const customers = () => {
+
+const settings = () => {
+
+  const [selectedColor, setSelectedColor] = useState('#3498db');
+  const [volume, setVolume] = useState(50);
+
+  const showToast = () => {
+    toast.success('Settings Saved Successfully!', {
+      position: 'top-center',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  };
+  const handleColorChange = (e) => {
+    setSelectedColor(e.target.value);
+  };
+
+  const handleVolumeChange = (e) => {
+    setVolume(e.target.value);
+  };
+
+  const colorClass = volume > 80 ? 'text-red-500' : volume > 50 ? 'text-cyan-600' : volume > 30 ? 'text-green-600' : 'text-yellow-500';
+
   return (
-    <div className='bg-gray-100 min-h-screen'>
-      <div className='flex justify-between p-4'>
-        <h2>Customers</h2>
-        <h2>Welcome Back, Clint</h2>
-      </div>
-      <div className='p-4'>
-        <div className='w-full m-auto p-4 border rounded-lg bg-white overflow-y-auto'>
-          <div className='my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between'>
-            <input className='bg-gray-200 rounded-full p-3 my-3 w-96' placeholder=' Name' />
-            <input className='bg-gray-200 rounded-full p-3 my-3 w-96 sm:text-left text-right' placeholder=' Email' />
-            <input className='bg-gray-200 rounded-full p-3 my-3 w-96 hidden md:grid' placeholder=' Last Order' />
-            <div class="inline-flex">
-              <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-3 w-40 rounded-full">
-                Next
-              </button>
+    <div className="container mx-auto mt-8">
+      <h1 className="text-2xl font-bold">Settings</h1>
 
-              <div className='pl-52 flex'>
-                <label className='cursor-pointer'><AiOutlineGithub size={40} /></label>
-                <label className='cursor-pointer'><AiFillSignal size={40} /></label>
-              </div>
-            </div>
+      <div className="bg-white p-4 shadow-md rounded-md">
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="username">
+            Username
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Enter your username"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+            Email
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="password">
+            Change Password
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="Enter your new password"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="bio">
+            Bio
+          </label>
+          <textarea
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="bio"
+            rows="3"
+            placeholder="Tell us about yourself"
+          ></textarea>
+        </div>
+
+
+
+
+        <div className="bg-white p-4 shadow-md rounded-md">
+          <div className="mb-4">
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="selectedColor">
+              Select Color
+            </label>
+            <input
+              type="color"
+              id="selectedColor"
+              value={selectedColor}
+              onChange={handleColorChange}
+              className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            />
           </div>
-          <ul>
-            {newData.map((order, id) => (
-              <li key={id} className='bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer'>
-                <div className='flex items-center'>
-                  <div className='bg-purple-100 p-3 rounded-lg'>
-                    <BsPersonFill className='text-purple-800' />
-                  </div>
-                  <p className='pl-4'>{order.name.first + ' ' + order.name.last}</p>
-                </div>
-                <p className='text-gray-600 sm:text-left text-right'>{order.name.first}@gmail.com</p>
-                <p className='hidden md:flex'>{order.date}</p>
-                <div className='sm:flex hidden justify-between items-center'>
-                  <p>{order.method}</p>
-                  <BsThreeDotsVertical />
-                </div>
-              </li>
-            ))}
-          </ul>
+
+          <div className="mb-4">
+            <label className="block text-gray-700 font-bold mb-2" htmlFor="volume">
+              Volume
+            </label>
+            <input
+              type="range"
+              id="volume"
+              value={volume}
+              min="0"
+              max="100"
+              onChange={handleVolumeChange}
+              className="w-full"
+            />
+            <p className={`text-sm mt-2 ${colorClass}`}>Current Volume: {volume}%</p>
+          </div>
+        </div>
+
+
+
+
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold m-2" htmlFor="socialMedia">
+            GitHub Links
+          </label>
+          <input
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline mb-2"
+            id="socialMedia"
+            type="text"
+            placeholder="GitHub Profile URL"
+          />
+          <input
+            className="border rounded-md w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="socialMedia"
+            type="text"
+            placeholder="Vercel Profile URL"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-gray-700 font-bold mb-2">Language Preferences</label>
+          <div>
+            <label className="inline-flex items-center">
+              <input type="checkbox" className="form-checkbox text-blue-500" />
+              <span className="ml-2">English</span>
+            </label>
+            <label className="inline-flex items-center ml-4">
+              <input type="checkbox" className="form-checkbox text-blue-500" />
+              <span className="ml-2">Urdu</span>
+            </label>
+            {/* Add more languages as needed */}
+          </div>
+        </div>
+        <div className='flex'>
+          <div className='pb-10'>
+            <button onClick={showToast} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Save Settings
+            </button>
+            <ToastContainer />
+          </div>
+          <div className='px-4'>
+            <Link href='/'>
+              <div className='text-gray-700 bg-green-400 hover:bg-green-500 font-black py-2 px-2 rounded-lg inline-block'>
+                <h1>Go Back To Home</h1>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
-export default customers;
+export default settings
