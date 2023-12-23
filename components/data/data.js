@@ -2,8 +2,8 @@ export const data = [
   {
     id: 1,
     name: {
-      first: 'Athar',
-      last: 'Farooq',
+      first: 'Elon',
+      last: 'Musk',
     },
     total: 2795.95,
     status: 'On Hold',
@@ -13,8 +13,8 @@ export const data = [
   {
     id: 2,
     name: {
-      first: 'Asia',
-      last: 'Athar',
+      first: 'Jeff',
+      last: 'Bezos',
     },
     total: 1195.95,
     status: 'Processing',
@@ -24,8 +24,8 @@ export const data = [
   {
     id: 3,
     name: {
-      first: 'Zaid',
-      last: 'Athar',
+      first: 'Bill',
+      last: 'Gates',
     },
     total: 5000000000000000,
     status: 'Completed',
@@ -35,8 +35,8 @@ export const data = [
   {
     id: 4,
     name: {
-      first: 'Huzaifa',
-      last: 'Athar',
+      first: 'The',
+      last: 'Rock',
     },
     total: 150.45,
     status: 'Processing',
@@ -46,8 +46,8 @@ export const data = [
   {
     id: 5,
     name: {
-      first: 'Hamza',
-      last: 'Athar',
+      first: 'Micheal',
+      last: 'Goerge',
     },
     total: 175.25,
     status: 'On Hold',
