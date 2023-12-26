@@ -28,7 +28,7 @@ const Header = () => {
       autoClose: 10000,
       hideProgressBar: false,
       closeOnClick: true,
-      pauseOnHover: true, 
+      pauseOnHover: true,
       draggable: true,
     });
   };
@@ -37,6 +37,18 @@ const Header = () => {
     <div className='flex justify-between px-4 pt-4'>
       <div>
         <h2 className='font-black text-gray-700 text-2xl'>Crypto Dashboard</h2>
+      </div>
+      <div>
+        <p className='font-black text-right'>Dev By:</p>
+      </div>
+      <div>
+        <h2 className='font-bold pl-0 text-left text-gray-700'>
+          Sir Athar,
+          Maam Asia,
+          Hafiz Zaid Sb.,
+          Sir Huzaifa,
+          Sir Hamza
+        </h2>
       </div>
       <div className='flex'>
         <div className='pt-2'>
@@ -54,7 +66,7 @@ const Header = () => {
           </Link>
         </div>
         <div className='flex pl-8 pr-2'>
-          <p className='text-purple-400'>Zaid</p>
+          <p className='text-purple-800 font-black italic'>Zaid</p>
         </div>
         <p className='pt-0.5'><CgProfile size={20} /></p>
       </div>
