@@ -38,18 +38,6 @@ const Header = () => {
       <div>
         <h2 className='font-black text-gray-700 text-2xl'>Crypto Dashboard</h2>
       </div>
-      <div>
-        <p className='font-black text-right'>Dev By:</p>
-      </div>
-      <div>
-        <h2 className='font-bold pl-0 text-left text-gray-700'>
-          Sir Athar,
-          Maam Asia,
-          Hafiz Zaid Sb.,
-          Sir Huzaifa,
-          Sir Hamza
-        </h2>
-      </div>
       <div className='flex'>
         <div className='pt-2'>
           <FaSearch size={20} />
