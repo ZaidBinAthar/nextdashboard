@@ -22,7 +22,6 @@ export default function Page() {
             .catch((error) => console.error("Error fetching data:", error));
     }
 
-
     function isUserIdUnique(id) {
         return !data.some((todo) => todo.UserId === id);
     }
@@ -39,6 +38,19 @@ export default function Page() {
         setNewUserName("");
     }
 
+    function handleNextElement(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            document.getElementById('Name').focus();
+        }
+    }
+
+    function handleKeyDown(e) {
+        if (e.key === "Enter") {
+            handleAdd(e.target.value);
+        }
+    }
+
     return (
         <div className="text-center justify-center items-center">
             <input
@@ -47,6 +59,7 @@ export default function Page() {
                 placeholder="Id"
                 value={newUserId}
                 onChange={(e) => setNewUserId(e.target.value)}
+                onKeyDown={handleNextElement}
             />
             <br />
             <input
@@ -55,6 +68,8 @@ export default function Page() {
                 placeholder="Name"
                 value={newUserName}
                 onChange={(e) => setNewUserName(e.target.value)}
+                onKeyDown={handleKeyDown}
+                id="Name"
             />
             <br />
             <button

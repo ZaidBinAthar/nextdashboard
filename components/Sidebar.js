@@ -9,6 +9,7 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineHome } from 'react-icons/ai';
 import './main.css';
 import { FaRegAddressCard } from 'react-icons/fa';
+import { CiLogout } from "react-icons/ci";
 
 const Sidebar = ({ children }) => {
   return (
@@ -67,6 +68,12 @@ const Sidebar = ({ children }) => {
           <Link href="/settings">
             <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
               <IoSettingsOutline size={25} />
+            </div>
+          </Link>
+
+          <Link href="/">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+              <CiLogout size={25} />
             </div>
           </Link>
         </div>
