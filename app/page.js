@@ -11,7 +11,7 @@ export default function Home() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const passwordInputRef = useRef(null);
-  const correctPassword = 'zaid bin ather huzaifa bin ather hamza bin ather 5566ipro';
+  const correctPassword = 'ZAID BIN ATHER HUZAIFA BIN ATHER HAMZA BIN ATHER 5566IPRO';
 
   useEffect(() => {
     if (passwordInputRef.current) {

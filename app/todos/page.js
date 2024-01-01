@@ -1,10 +1,11 @@
 'use client'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 export default function Page() {
     const [data, setData] = useState([]);
     const [newUserId, setNewUserId] = useState("");
     const [newUserName, setNewUserName] = useState("");
+    const idInputRef = useRef(null);
 
     useEffect(() => {
         getAllTodos();
@@ -33,6 +34,12 @@ export default function Page() {
         }
 
         setData([...data, { UserId: newUserId, UserName: newUserName }]);
+
+        // Focus on the "Id" input using the useRef
+        if (idInputRef.current) {
+            idInputRef.current.focus();
+        }
+
         // Clear input fields after adding a new todo
         setNewUserId("");
         setNewUserName("");
@@ -55,11 +62,12 @@ export default function Page() {
         <div className="text-center justify-center items-center">
             <input
                 className="bg-blue-200 rounded-lg px-2 m-1"
-                type="text"
+                type="number"
                 placeholder="Id"
                 value={newUserId}
                 onChange={(e) => setNewUserId(e.target.value)}
                 onKeyDown={handleNextElement}
+                ref={idInputRef} // Attach the ref to the "Id" input
             />
             <br />
             <input
