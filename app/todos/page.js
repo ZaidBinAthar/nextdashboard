@@ -12,9 +12,16 @@ export default function Page() {
 
     function getAllTodos() {
         fetch("http://localhost:3000/api/todos")
-            .then((response) => response.json())
-            .then((data) => setData(data));
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then((data) => setData(data))
+            .catch((error) => console.error("Error fetching data:", error));
     }
+
 
     function isUserIdUnique(id) {
         return !data.some((todo) => todo.UserId === id);
