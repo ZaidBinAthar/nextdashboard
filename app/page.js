@@ -7,24 +7,31 @@ import BarChart from '../components/BarChart';
 import RecentOrders from '../components/RecentOrders';
 
 export default function Home() {
+  const [showSplash, setShowSplash] = useState(true);
   const [showModal, setShowModal] = useState(true);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const passwordInputRef = useRef(null);
-  const correctPassword = 'ZAID BIN ATHER HUZAIFA BIN ATHER HAMZA BIN ATHER 5566IPRO';
+  const correctPassword = '5566ipro';
 
   useEffect(() => {
     if (passwordInputRef.current) {
       passwordInputRef.current.focus();
     }
+
+    const splashTimeout = setTimeout(() => {
+      setShowSplash(false);
+    }, 5000);
+
+    return () => clearTimeout(splashTimeout);
   }, []);
 
   const handleSubmit = () => {
     if (password === correctPassword) {
       setShowModal(false);
+      setShowSplash(false);
     } else {
       setError('Incorrect password. Please try again.');
-      // Select the text in the password input when incorrect
       passwordInputRef.current.select();
     }
   };
@@ -37,53 +44,76 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className={`overlay ${showModal ? 'overlay-active' : ''}`}></div>
-      {showModal && (
-        <div className='password-modal'>
-          <div className='modal-content'>
-            <h2>Password Required</h2>
-            <input
-              ref={passwordInputRef}
-              type='password'
-              placeholder='Enter password'
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
-            />
-            {error && <div className='error-message'>{error}</div>}
-            <button onClick={handleSubmit}>Submit</button>
-          </div>
+
+      {showSplash && (
+        <div className='splash-screen'>
+          <img src='https://source.unsplash.com/1200x1000/?cloud' alt='Your Image' />
         </div>
       )}
-      <main className={`bg-gray-100 min-h-screen ${showModal ? 'blurred' : ''}`}>
-        <Header />
-        <TopCards />
-        <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
-          <BarChart />
-          <RecentOrders />
+
+      <main className='bg-gray-100 min-h-screen'>
+        <div className={`main-content ${showModal ? 'blurred' : ''}`}>
+
+          {showModal && (
+            <div className='password-modal'>
+              <div className='modal-content'>
+                <h2>Password Required</h2>
+                <input
+                  ref={passwordInputRef}
+                  type='password'
+                  placeholder='Enter password'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
+                />
+                {error && <div className='error-message'>{error}</div>}
+                <button onClick={handleSubmit}>Submit</button>
+              </div>
+            </div>
+          )}
+
+          <Header />
+          <TopCards />
+          <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
+            <BarChart />
+            <RecentOrders />
+          </div>
         </div>
       </main>
+
       <style jsx>{`
-        .overlay {
+        .splash-screen {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          background: transparent;
-          pointer-events: none;
-          z-index: 999;
-          transition: background 0.3s ease;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
         }
 
-        .overlay-active {
-          background: rgba(0, 0, 0, 0.5);
-          pointer-events: auto;
+        .splash-screen h1 {
+          font-size: 24px;
+          color: #333;
+        }
+
+        .main-content {
+          position: relative;
+        }
+
+        img {
+          width: 100%;
+          max-width: 400px; /* Adjust the max-width as needed */
+          margin: 0 auto;
+          display: block;
         }
 
         .password-modal {
           position: fixed;
-          top: 50%;
+          top: 7%;
           left: 50%;
           transform: translate(-50%, -50%);
           background: white;
@@ -123,8 +153,10 @@ export default function Home() {
         }
 
         .blurred {
-          filter: blur(2px);
+          filter: blur(0px); // Apply the blur effect only to the content behind the password modal
         }
+
+        /* Your existing styles go here */
       `}</style>
     </>
   );
