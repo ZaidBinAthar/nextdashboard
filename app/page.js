@@ -113,7 +113,7 @@ export default function Home() {
 
         .password-modal {
           position: fixed;
-          top: 7%;
+          top: 5%;
           left: 50%;
           transform: translate(-50%, -50%);
           background: white;
