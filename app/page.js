@@ -47,7 +47,7 @@ export default function Home() {
 
       {showSplash && (
         <div className='splash-screen'>
-          <img src='https://source.unsplash.com/1200x1000/?cloud' alt='Your Image' />
+          <img src='https://source.unsplash.com/1200x1000/?Lamborghini' alt='Your Image' />
         </div>
       )}
 
