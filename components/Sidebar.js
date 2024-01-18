@@ -25,61 +25,61 @@ const Sidebar = ({ children }) => {
           <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
 
           <Link href="/">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <AiOutlineHome size={20} />
             </div>
           </Link>
 
           <Link href="/market">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <GiSpeedometer size={20} />
             </div>
           </Link>
 
           <Link href="/mail">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <FiMail size={20} />
             </div>
           </Link>
 
           <Link href="/customers">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <RxPerson size={20} />
             </div>
           </Link>
 
           <Link href="/orders">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <HiOutlineShoppingBag size={20} />
             </div>
           </Link>
 
           <Link href="/newper">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <BsPersonAdd size={25} />
             </div>
           </Link>
 
           <Link href="/todos">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <FaRegAddressCard size={25} />
             </div>
           </Link>
 
           <Link href="/settings">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <IoSettingsOutline size={25} />
             </div>
           </Link>
 
           <Link href="/typing">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <FaRegKeyboard size={25} />
             </div>
           </Link>
 
           <Link href="/">
-            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-4 p-3 rounded-lg inline-block">
+            <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <CiLogout size={25} />
             </div>
           </Link>
