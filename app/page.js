@@ -1,18 +1,9 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import react from "react";
 import Head from "next/head";
-import Header from "../components/Header";
-import TopCards from "../components/TopCards";
-import BarChart from "../components/BarChart";
-import RecentOrders from "../components/RecentOrders";
+import Login from "@/components/Login";
 
 export default function Home() {
-  const [showSplash, setShowSplash] = useState(true);
-  const [showModal, setShowModal] = useState(true);
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const passwordInputRef = useRef(null);
-  const correctPassword = "5566ipro";
 
   return (
     <>
@@ -24,12 +15,7 @@ export default function Home() {
       </Head>
 
       <main className="bg-gray-100 min-h-screen">
-        <Header />
-        <TopCards />
-        <div className="p-4 grid md:grid-cols-3 grid-cols-1 gap-4">
-          <BarChart />
-          <RecentOrders />
-        </div>
+        <Login />
       </main>
 
       <style jsx>{`

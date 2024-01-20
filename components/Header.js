@@ -1,15 +1,13 @@
-'use client'
-import React from 'react'
-import { FaSearch } from "react-icons/fa";
-import { BsChatText, BsBell } from "react-icons/bs";
-import { IoSettingsOutline } from "react-icons/io5";
-import { CgProfile } from "react-icons/cg";
+import React from 'react';
+import { FaSearch } from 'react-icons/fa';
+import { BsChatText, BsBell } from 'react-icons/bs';
+import { IoSettingsOutline } from 'react-icons/io5';
+import { CgProfile } from 'react-icons/cg';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
-
   const showToast = () => {
     toast.success('Thanks To Like!', {
       position: 'top-center',
@@ -37,17 +35,21 @@ const Header = () => {
       <div className='mb-4 lg:mb-0'>
         <h2 className='font-black text-gray-700 text-2xl'>Crypto Dashboard</h2>
       </div>
-      <div className='flex items-center'>
+      <div className='flex items-center flex-wrap'>
         <div className='pt-2 mr-2'>
           <FaSearch size={20} />
         </div>
-        <input className='pl-3 py-1 rounded-md focus:outline-none' type='text' placeholder='Search here...' />
-        <BsChatText onClick={showToast1} size={20} className='ml-2 cursor-pointer' />
-        <div className='ml-2'>
+        <input
+          className='pl-3 py-1 rounded-md focus:outline-none mb-2 lg:mb-0 lg:ml-2 lg:mr-2'
+          type='text'
+          placeholder='Search here...'
+        />
+        <BsChatText onClick={showToast1} size={20} className='ml-2 cursor-pointer mb-2 lg:mb-0' />
+        <div className='ml-2 mb-2 lg:mb-0'>
           <BsBell onClick={showToast} size={20} className='cursor-pointer' />
           <ToastContainer />
         </div>
-        <div className='ml-2'>
+        <div className='ml-2 mb-2 lg:mb-0'>
           <Link href='/settings'>
             <IoSettingsOutline size={25} className='cursor-pointer' />
           </Link>
@@ -58,7 +60,7 @@ const Header = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
