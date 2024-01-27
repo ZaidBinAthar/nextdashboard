@@ -4,7 +4,7 @@ import { ImCross } from "react-icons/im";
 import { sales } from '@/components/data/sales';
 import { SiGmail } from "react-icons/si";
 
-const customers = () => {
+const mail = () => {
   return (
     <div className='bg-gray-100 min-h-screen'>
       <div className='flex justify-between p-4'>
@@ -39,4 +39,4 @@ const customers = () => {
     </div>
   );
 }
-export default customers;
+export default mail;

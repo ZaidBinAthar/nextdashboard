@@ -24,7 +24,7 @@ const Sidebar = ({ children }) => {
           </Link>
           <span className="border-b-[1px] border-gray-200 w-full p-2"></span>
 
-          <Link href="/">
+          <Link href="/dashboard">
             <div className="sidecolor hover:bg-blue-100 cursor-pointer my-3 p-3 rounded-lg inline-block">
               <AiOutlineHome size={20} />
             </div>
